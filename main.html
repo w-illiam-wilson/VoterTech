@@ -278,7 +278,7 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":
             <button class = "collapsible" style="background-color: #f5f5e6; color: white; cursor: pointer; padding: 18px; width: 100%; border: none; text-align: left; outline: none; font-size: 15px"><h5>Register to Vote ▼</h5></button>
             <div style="padding: 0 27px; display: none; overflow: hidden; background-color: white">
               <p></p>
-              <div class="registration-get">Get registered to vote in <b>Georgia</b> <a href="https://registertovote.sos.ga.gov/GAOLVR/welcome.do#no-back-button">here</a></div>
+              <div class="registration-get">Get registered to vote in <b>Georgia</b> <a href="https://registertovote.sos.ga.gov/GAOLVR/welcome.do#no-back-button">here</a>.</div>
               <p></p>
             </div>
             <button class = "collapsible" style="background-color: #f5f5e6; color: white; cursor: pointer; padding: 18px; width: 100%; border: none; text-align: left; outline: none; font-size: 15px"><h5>Absentee Ballot Information ▼</h5></button>
@@ -319,7 +319,7 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":
               selectElement.addEventListener('change', (event) => {
               const registrationInfo = document.querySelector('.registration-get');
               var str = event.target.value;
-
+              //info from https://www.ncsl.org/research/elections-and-campaigns/electronic-or-online-voter-registration.aspx#c
               switch(str) {
                 case "Alabama":
                   linkedContent = here.link("https://www.alabamavotes.gov/olvr/default.aspx");
@@ -331,7 +331,7 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":
                   linkedContent = here.link("https://servicearizona.com/webapp/evoter/");
                   break;
                 case "Arkansas":
-                  linkedContent = here.link("https://www.sos.arkansas.gov/elections/voter-information/voter-registration-information") + ". Your state does not have online registration.";
+                  linkedContent = here.link("https://www.sos.arkansas.gov/elections/voter-information/voter-registration-information") + ". Your state does not have online registration";
                   break;
                 case "California":
                   linkedContent = here.link("http://registertovote.ca.gov/");
@@ -379,7 +379,7 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":
                   linkedContent = here.link("http://www.sos.la.gov/ElectionsAndVoting/Pages/OnlineVoterRegistration.aspx");
                   break;
                 case "Maine":
-                  linkedContent = here.link("https://www.maine.gov/sos/cec/elec/voter-info/votreg.html") + ". Your state does not have online registration.";
+                  linkedContent = here.link("https://www.maine.gov/sos/cec/elec/voter-info/votreg.html") + ". Your state does not have online registration";
                   break;
 		            case "Maryland":
                   linkedContent = here.link("https://voterservices.elections.state.md.us/OnlineVoterRegistration/VoterType");
@@ -394,13 +394,13 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":
                   linkedContent = here.link("https://mnvotes.sos.state.mn.us/VoterRegistration/VoterRegistrationStep1.aspx");
                   break;
                 case "Mississippi":
-                  linkedContent = here.link("https://www.sos.ms.gov/Elections-Voting/Pages/Voter-Registration-Information.aspx") + ". Your state does not have online registration.";
+                  linkedContent = here.link("https://www.sos.ms.gov/Elections-Voting/Pages/Voter-Registration-Information.aspx") + ". Your state does not have online registration";
                   break;
                 case "Missouri":
-                  linkedContent = here.link("http://www.sos.mo.gov/elections/goVoteMissouri/register.aspx") + ". Your state does not have online registration.";
+                  linkedContent = here.link("http://www.sos.mo.gov/elections/goVoteMissouri/register.aspx") + ". Your state does not have online registration";
                   break;
                 case "Montana":
-                  linkedContent = here.link("https://sosmt.gov/elections/vote/") + ". Your state does not have online registration.";
+                  linkedContent = here.link("https://sosmt.gov/elections/vote/") + ". Your state does not have online registration";
                   break;
                 case "Nebraska":
                   linkedContent = here.link("https://www.nebraska.gov/apps-sos-voter-registration/");
@@ -409,20 +409,80 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":
                   linkedContent = here.link("https://nvsos.gov/sosvoterservices/Registration/step1.aspx");
                   break;
                 case "New Hampshire":
-                  linkedContent = here.link("https://sos.nh.gov/HowRegVote.aspx") + ". Your state does not have online registration.";
+                  linkedContent = here.link("https://sos.nh.gov/HowRegVote.aspx") + ". Your state does not have online registration";
                   break;
                 case "New Jersey":
-                  linkedContent = here.link("https://nj.gov/state/elections/voter-registration.shtml") + ". Your state does not have online registration, but a recently passed law should change that soon.";
+                  linkedContent = here.link("https://nj.gov/state/elections/voter-registration.shtml") + ". Your state does not have online registration, but a recently passed law should change that soon";
                   break;
-                case "Nevada":
-                  linkedContent = here.link("https://nvsos.gov/sosvoterservices/Registration/step1.aspx");
+                case "New Mexico":
+                  linkedContent = here.link("https://portal.sos.state.nm.us/OVR/(S(od4445h5uj2f5tyucvvhszdf))/WebPages/InstructionsStep1.aspx?AspxAutoDetectCookieSupport=1");
+                  break;
+                case "New York":
+                  linkedContent = here.link("http://dmv.ny.gov/org/more-info/electronic-voter-registration-application");
+                  break;
+                case "North Carolina":
+                  linkedContent = here.link("https://www.ncsbe.gov/Voters/Registering-to-Vote") + ". Your state does not have online registration";
+                  break;
+                case "North Dakota":
+                  linkedContent = here.link("https://vip.sos.nd.gov/PortalListDetails.aspx?ptlhPKID=79&ptlPKID=7") + ". Your state does not have online registration";
+                  break;
+                case "Ohio":
+                  linkedContent = here.link("https://olvr.sos.state.oh.us/ovru/ModifyAddress.aspx");
+                  break;
+                case "Oklahoma":
+                  linkedContent = here.link("https://okvoterportal.okelections.us") + ". Your state does not have a completely functional online registration system. If you have not previously registered, you will have to register by mail";
+                  break;
+                case "Oregon":
+                  linkedContent = here.link("https://secure.sos.state.or.us/orestar/vr/register.do?lang=eng&source=SOS");
+                  break;
+                case "Oregon":
+                  linkedContent = here.link("https://secure.sos.state.or.us/orestar/vr/register.do?lang=eng&source=SOS");
+                  break;
+                case "Pennsylvania":
+                  linkedContent = here.link("https://www.pavoterservices.state.pa.us/Pages/VoterRegistrationApplication.aspx");
+                  break;
+                case "Rhode Island":
+                  linkedContent = here.link("https://vote.sos.ri.gov/");
+                  break;
+                case "South Carolina":
+                  linkedContent = here.link("https://info.scvotes.sc.gov/eng/ovr/start.aspx");
+                  break;
+                case "South Dakota":
+                  linkedContent = here.link("https://sdsos.gov/elections-voting/voting/register-to-vote/default.aspx") + ". Your state does not have online registration.";
+                  break;
+                case "Tennessee":
+                  linkedContent = here.link("https://ovr.govote.tn.gov/");
+                  break;
+                case "Texas":
+                  linkedContent = here.link("https://www.votetexas.gov/register-to-vote/index.html") + ". Your state does not have online registration.";
+                  break;
+                case "Utah":
+                  linkedContent = here.link("https://secure.utah.gov/voterreg/index.html");
+                  break;
+                case "Vermont":
+                  linkedContent = here.link("http://olvr.sec.state.vt.us/");
+                  break;
+                case "Virginia":
+                  linkedContent = here.link("https://www.vote.virginia.gov/");
+                  break;
+                case "Washington":
+                  linkedContent = here.link("https://wei.sos.wa.gov/agency/osos/en/pages/myvote.aspx");
+                  break;
+                case "West Virginia":
+                  linkedContent = here.link("https://ovr.sos.wv.gov/Register#Landing");
+                  break;
+                case "Wisconsin":
+                  linkedContent = here.link("https://myvote.wi.gov/en-us/RegisterToVote");
+                  break;
+                case "Wyoming":
+                  linkedContent = here.link("https://soswy.state.wy.us/elections/registeringtovote.aspx") + ". Your state does not have online registration.";
                   break;
                 default:
-                  linkedContent = here;
+                  linkedContent = here.link("http://www.nass.org/can-i-vote/register-to-vote");
                   break;
               }
               var result2 = str.bold();
-              registrationInfo.innerHTML = `Get registered to vote in ` + result2 + " " + linkedContent;
+              registrationInfo.innerHTML = `Get registered to vote in ` + result2 + " " + linkedContent + ".";
             });
             </script>
 
